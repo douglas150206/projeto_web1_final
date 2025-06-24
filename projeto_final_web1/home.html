@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Lista de Compras</title>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" crossorigin="anonymous"/>
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Lista de Compras</h1>
+      </header>
+
+      <form id="product-form">
+        <p>Adicione um produto</p>
+        <div class="form-control">
+          <input type="text" id="product-name" placeholder="Nome do item" required />
+          <input type="text" id="product-category" placeholder="Categoria" required />
+          <input type="number" id="product-price" placeholder="Preço" step="0.01" required />
+          <input type="number" id="product-quantity" placeholder="Qtd" required />
+          <button type="submit"><i class="fa-solid fa-plus"></i></button>
+        </div>
+      </form>
+
+      <div id="toolbar">
+        <div id="search">
+          <h4>Pesquisar:</h4>
+          <form>
+            <input type="text" id="search-input" placeholder="Buscar por nome..." />
+            <button id="erase-button">
+              <i class="fa-solid fa-delete-left"></i>
+            </button>
+          </form>
+        </div>
+        <div id="filter">
+          <h4>Filtrar:</h4>
+          <select id="filter-select">
+            <option value="all">Todos</option>
+            <option value="done">Comprados</option>
+            <option value="todo">A comprar</option>
+          </select>
+          <select id="category-filter">
+            <option value="all">Todas as Categorias</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="product-list"></div>
+      <div id="total-container"><strong>Total:</strong> R$ <span id="total">0.00</span></div>
+    </div>
+
+    <div id="edit-modal" class="modal hide">
+      <div class="modal-content">
+        <h2>Editar Produto</h2>
+        <form id="edit-form">
+          <input type="text" id="edit-name" required />
+          <input type="text" id="edit-category" required />
+          <input type="number" id="edit-price" step="0.01" required />
+          <input type="number" id="edit-quantity" required />
+          <button type="submit"><i class="fa-solid fa-check-double"></i> Salvar</button>
+          <button id="cancel-edit-btn" type="button">Cancelar</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

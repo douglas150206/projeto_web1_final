@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles_index.css">
+  <title>Cadastro e Login</title>
+</head>
+<body>
+  <div class="container" id="auth-container">
+    <h2 id="form-title">Cadastro</h2>
+    <div class="message" id="msg"></div>
+    <form id="cadastro-form">
+      <div class="form-group">
+        <label for="cad-username">Usuário</label>
+        <input type="text" id="cad-username" required>
+      </div>
+      <div class="form-group">
+        <label for="cad-password">Senha</label>
+        <input type="password" id="cad-password" required>
+      </div>
+      <button type="submit">Cadastrar</button>
+    </form>
+
+    <form id="login-form" style="display:none;">
+      <div class="form-group">
+        <label for="log-username">Usuário</label>
+        <input type="text" id="log-username" required>
+      </div>
+      <div class="form-group">
+        <label for="log-password">Senha</label>
+        <input type="password" id="log-password" required>
+      </div>
+      <button type="submit">Entrar</button>
+    </form>
+
+    <div class="switch" id="toggle-form">Já tem conta? Faça login</div>
+  </div>
+
+  <script src="js/script_index.js"></script>
+</body>
+</html>
